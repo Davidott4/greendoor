@@ -1,0 +1,8 @@
+[
+  {"id": 1, "itemName": "Coors", "type": "Beer", "subtype": "lager", "pakSize": 6, "price": 4.99, "fluidOnces": 12},
+  {"id": 1, "itemName": "Heineken", "type": "Beer", "subtype": "lager", "pakSize": 6, "price": 8.99, "fluidOnces": 12},
+  {"id": 1, "itemName": "Corona", "type": "Beer", "subtype": "pilsner", "pakSize": 6, "price": 5.99, "fluidOnces": 12},
+  {"id": 1, "itemName": "Merlot", "type": "Wine", "subtype": "Red Wine", "pakSize": 1, "price": 14.99, "fluidOnces": 24},
+  {"id": 1, "itemName": "Sky", "type": "Spirit", "subtype": "Vodka", "pakSize": 1, "price": 12.99, "fluidOnces": 24},
+  {"id": 1, "itemName": "Bailey's", "type": "Spirit", "subtype": "other", "pakSize": 1, "price": 14.99, "fluidOnces": 24}
+]

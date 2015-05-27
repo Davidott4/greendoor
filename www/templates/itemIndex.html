@@ -1,0 +1,33 @@
+<ion-view title="Items">
+
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>
+    </div>
+    <div>
+    <content has-header="true" has-subheader="true">
+      <br><br><br>
+
+          <div class=row ng-repeat="item in items" ng-if = "$index %2 ==0">
+
+            <div class="col col-50">
+                <item-card item = "{{items[$index]}}"   ></item-card>
+                {{$index}}
+            </div>
+            <div class="col col-50" ng-if= "$index +1 < items.length">
+                <item-card item = "{{items[$index+1]}}"></item-card>
+                {{$index+1}}
+
+            </div>
+
+
+         </div>
+
+
+    </content>
+  </div>
+</ion-view>
