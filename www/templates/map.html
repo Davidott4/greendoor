@@ -1,0 +1,22 @@
+
+<ion-view view-title="Map">
+
+  <ion-content>
+    <div id="map" data-tap-disabled="true">Map</div>
+      <button class="button button-clear" ng-click="alert()">X</button>
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+    </div>
+    <div id="storesList">
+      <list>
+         <item ng-repeat="store in stores" class="item" type="item-text-wrap" href="#/app/itemIndex">
+           <a  href="#/app/store/{{store.id_store}}" >ME </a>
+            <h3>{{store.storeName}} Distance</h3>
+            {{store.city}},{{store.state}}  {{store.zip}}
+         </item>
+         </item>
+      </list>
+
+    </div>
+
+  </ion-content>
+</ion-view>

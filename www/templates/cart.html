@@ -1,5 +1,19 @@
-<ion-view view-title="Cart">
-  <ion-content>
-    <h1>Cart</h1>
-  </ion-content>
+<ion-view title="Cart">
+
+    
+      <br><br><br>
+
+
+         <list>
+            <item ng-repeat="item in cart" class="item" type="item-text-wrap">
+               <h3>{{item.itemName}}<ng-if="{{item.pakSize}} !=1">  {{item.pakSize}} Pack</ng-if></h3>
+               {{item.fluidOnces}} fl. oz, ${{item.price}}
+                 <button class="button" ng-click="decrementCart(item)">-</button>  {{item.cartQuantity}} <button class="button" ng-click="addToCart(item)">+</button>
+            </item>
+            </item>
+         </list>
+
+
+    </content>
+  </ion-scroll>
 </ion-view>

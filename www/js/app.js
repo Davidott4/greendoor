@@ -47,22 +47,12 @@ greendoor.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: "/playlists/:playlistId",
+  .state('app.map', {
+    url: "/map",
     views: {
       'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/map.html",
+        controller: 'MapCtrl'
       }
     }
   })
@@ -80,7 +70,7 @@ greendoor.config(function($stateProvider, $urlRouterProvider) {
     views: {
       'menuContent': {
         templateUrl: "templates/itemIndex.html",
-        controller: 'ItemIndexCtrl'
+        controller: 'itemIndexCtrl'
         /*resolve:{
           drinks:['$http', function($http){
             return $http.get('/api/items.json').then(function(response){
@@ -91,11 +81,15 @@ greendoor.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
-  .state('employee-detail', {
-    url: '/employee/:itemId',
-    templateUrl: 'templates/item-detail.html',
-    controller: 'ItemDetailCtrl'
+  .state('app.store', {
+    url: '/store/:id_store',
+    views:{
+      'menuContent':{
+        templateUrl: 'templates/store.html',
+        controller: 'StoreCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/map');
 });

@@ -14,6 +14,10 @@ angular.module('greendoor.directives.itemCard', ['greendoor.services'])
       {
         CartService.addToCart(item)
       }
+      $scope.decrementCart = function(item)
+      {
+        CartService.decrementCart(item)
+      }
     }
   }
 });
